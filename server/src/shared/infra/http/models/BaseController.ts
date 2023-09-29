@@ -113,9 +113,9 @@ export class NettuAppResponse {
         });
     }
 
-    public fail(): void {
+    public fail(message?: string): void {
         return this.jsonResponse(500, {
-            message: 'An unexpected error occurred',
+            message: message ?? 'Internal server error',
         });
     }
 }

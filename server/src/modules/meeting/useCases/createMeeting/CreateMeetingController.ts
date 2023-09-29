@@ -25,12 +25,11 @@ export class CreateMeetingController extends BaseController<RequestBodySchema> {
             if (result.isLeft()) {
                 const error = result.value;
                 const e = error.errorValue();
-
                 switch (error.constructor) {
                     case CreateMeetingUseCaseErrors.InvalidPropertyError:
                         return res.forbidden(e.message);
                     default:
-                        return res.fail();
+                        return res.fail(e.message);
                 }
             } else {
                 const dto: CreateMeetingResponseDTO = result.value;
