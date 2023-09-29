@@ -206,10 +206,12 @@ const EntryPage = (props: Props) => {
           }));
           return;
         }
+        /*
         setTimeout(() => {
           alert("Meeting has now closed");
           window.location.href = meeting.redirectURI;
         }, meeting.openingTime.endTS - new Date().valueOf());
+        */
       }
       meetingInteractor.moveToMeetingLobby();
     }
