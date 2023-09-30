@@ -10,7 +10,7 @@ import {
     RtpEncodingParameters,
     WebRtcTransport,
     Worker,
-} from 'mediasoup/lib/types';
+} from "mediasoup/node/lib/types";
 import { config } from './config';
 import {logger} from "../../../../logger"
 

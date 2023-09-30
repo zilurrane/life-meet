@@ -1,5 +1,5 @@
 import express from 'express';
-import { Consumer, MediaKind, Producer, RtpCapabilities, WebRtcTransport } from 'mediasoup/lib/types';
+import { Consumer, MediaKind, Producer, RtpCapabilities, WebRtcTransport } from "mediasoup/node/lib/types";
 import { io } from '../../../../shared/infra/http/app';
 import { meetingRepo } from '../../repos';
 import { config } from './config';
