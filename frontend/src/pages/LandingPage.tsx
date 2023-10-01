@@ -161,7 +161,7 @@ const LandingPage = (props: Props) => {
     <div className={classes.container}>
       <AppBar className={classes.appbar} position="fixed">
         <Toolbar>
-          <NettuLogoWithLabel label="Nettu Meet" />
+          <NettuLogoWithLabel label="LifeMeet" />
           <div className={classes.appbarEnd}>
             <GithubRepoBadge />
             {!isMobile && (
@@ -220,7 +220,7 @@ const LandingPage = (props: Props) => {
                   className={classes.description}
                   color="textSecondary"
                 >
-                  Nettu Meet is an open source video conference application
+                  LifeMeet is an open source video conference application
                   designed for interactive learning online.
                 </Typography> */}
                 {[

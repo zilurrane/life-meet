@@ -4,7 +4,7 @@
 
 ## Overview
 
-`Nettu Meet` is an open source video conference web application designed for interactive online tutoring. Some of the features included are:
+`LifeMeet` is an open source video conference web application designed for interactive online tutoring. Some of the features included are:
 
 - **Audio and video**: Real-time sharing of audio and video.
 - **Shared whiteboard**: Collaborate with students on a shared whiteboard.
@@ -55,7 +55,7 @@ $ npm start
 * Create meeting
 ```bash
 # The response will give you a entrypoint / url for your meeting.
-$ curl -X POST "http://localhost:5000/api/v1/meeting" -H  "authorization: nettu_meet_default_secret" -H  "Content-Type: application/json" -d "{  \"title\": \"First Nettu Meet meeting\"}"
+$ curl -X POST "http://localhost:5000/api/v1/meeting" -H  "authorization: nettu_meet_default_secret" -H  "Content-Type: application/json" -d "{  \"title\": \"First LifeMeet meeting\"}"
 ```
 
 

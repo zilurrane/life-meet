@@ -66,12 +66,12 @@ export class EmailService implements IEmailService {
                     },
                     Text: {
                         Charset,
-                        Data: `Email verification code for Nettu Meet is: ${params.code}`,
+                        Data: `Email verification code for LifeMeet is: ${params.code}`,
                     },
                 },
                 Subject: {
                     Charset,
-                    Data: 'Email verification code for Nettu Meet',
+                    Data: 'Email verification code for LifeMeet',
                 },
             },
             Source: awsConfig.sesEmailSource,

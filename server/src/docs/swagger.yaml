@@ -1,7 +1,7 @@
 swagger: '2.0'
 info:
-    title: Nettu Meet API
-    description: API description of the endpoints relevant for external applications that integrates with Nettu Meet.
+    title: LifeMeet API
+    description: API description of the endpoints relevant for external applications that integrates with LifeMeet.
     version: 1.0.0
 basePath: /api/v1
 schemes:

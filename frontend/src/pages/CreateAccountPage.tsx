@@ -282,7 +282,7 @@ const CreateAccountPage = (props: Props) => {
               component="p"
               style={{ marginBottom: "16px" }}
             >
-              Give a name to your Nettu meeting app. This can be changed later.
+              Give a name to your LifeMeet meeting account. This can be changed later.
             </Typography>
             <form noValidate autoComplete="off">
               <TextField
@@ -331,7 +331,7 @@ const CreateAccountPage = (props: Props) => {
               component="p"
               style={{ marginBottom: "16px" }}
             >
-              You have succefully created a Nettu Meet account! Copy and store
+              You have succefully created a LifeMeet account! Copy and store
               your api-key securely and check out the documentation of how to
               get started.
             </Typography>

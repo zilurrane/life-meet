@@ -222,7 +222,7 @@ const Lobby = (props: Props) => {
   return (
     <div className={classes.container}>
       <div className={classes.header}>
-        <NettuLogoWithLabel label="Nettu Meet" />
+        <NettuLogoWithLabel label="LifeMeet" />
       </div>
       <div className={classes.body}>
         <Paper className={classes.videoPreview}>
