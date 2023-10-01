@@ -1,6 +1,6 @@
 import { createStyles, makeStyles, Typography } from "@material-ui/core";
 import { useState } from "react";
-import NettuLetter from "../../assets/logos/NettuLetter.png";
+import NettuLetter from "../../assets/logos/logo.png";
 import { meetingState } from "../../modules/meeting/state/meeting";
 
 const useStyles = makeStyles((theme) =>
@@ -58,7 +58,7 @@ export const NettuLogoWithLabel = (props: Props) => {
   return (
     <div className={classes.container}>
       <div className={classes.logoLetter}>
-        <img src={imgSrc} alt="nettu" onError={() => setImgLoadError(true)} />
+        <img src={imgSrc} alt="LifeMeet" onError={() => setImgLoadError(true)} />
       </div>
       <Typography
         className={classes.logoTitle}

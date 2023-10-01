@@ -42,4 +42,4 @@ jobs:
           context: ./frontend
           file: ./frontend/docker/Dockerfile
           push: true
-          tags: zilurrane/nettu-meet-frontend:latest
+          tags: zilurrane/life-meet-frontend:latest

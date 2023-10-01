@@ -83,7 +83,7 @@ const email_verification_template = `
     </head>
     <body>
         <div id="banner" class="flex-center">
-            <img src="https://nettu-company-assets.s3-eu-west-1.amazonaws.com/NettuMeetingLogo.png" alt="NETTU"/>
+            <img src="https://lifecompilers.com/assets/images/logo.png" alt="LifeMeet"/>
         </div>
         <p class="helpertext">LifeMeet conference solution</p>
         <div class="container">

@@ -5,11 +5,11 @@ services:
         environment:
             MONGO_INITDB_ROOT_USERNAME: root
             MONGO_INITDB_ROOT_PASSWORD: rootpassword
-            MONGO_INITDB_DATABASE: nettu-meeting
+            MONGO_INITDB_DATABASE: life-meet
         ports:
             - 27017:27017
         volumes:
-            - mongodb_data_nettumeet_container:/data/db
+            - mongodb_data_lifemeet_container:/data/db
         logging:
             driver: none
     redis:
@@ -33,4 +33,4 @@ services:
         depends_on: ['elasticsearch']
 
 volumes:
-    mongodb_data_nettumeet_container:
+    mongodb_data_lifemeet_container:

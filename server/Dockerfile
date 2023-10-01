@@ -13,10 +13,10 @@ COPY tsconfig.json .
 COPY src src
 RUN npm install
 
-ENV NETTU_REDIS_HOST="host.docker.internal"
-ENV NETTU_REDIS_PORT=6379
+ENV LIFEMEET_REDIS_HOST="host.docker.internal"
+ENV LIFEMEET_REDIS_PORT=6379
 ENV MONGODB_CONNECTION_STRING=mongodb://root:rootpassword@host.docker.internal:27017
-ENV MONGODB_NAME=nettu-meeting
+ENV MONGODB_NAME=life-meet
 
 
 CMD npm run start

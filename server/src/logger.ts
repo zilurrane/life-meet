@@ -11,7 +11,7 @@ let stream = [{stream: process.stdout}];
 
 if(elasticsearchURL !== null){
   const streamToElastic = pinoElastic({
-    index: 'nettu-meet',
+    index: 'life-meet',
     consistency: 'one',
     node: elasticsearchURL,
     'es-version': 7,

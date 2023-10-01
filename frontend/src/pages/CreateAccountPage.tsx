@@ -181,7 +181,7 @@ const CreateAccountPage = (props: Props) => {
             </Typography>
             <Typography variant="body2" component="p" gutterBottom>
               This is the only personal information we will need from you before
-              you can create your own nettu meet account.
+              you can create your own LifeMeet account.
             </Typography>
             <TextField
               required

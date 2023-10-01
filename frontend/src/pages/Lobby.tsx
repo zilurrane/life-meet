@@ -1,6 +1,6 @@
 /**
  * This is the entrypage where users will first arrive from the external application.
- * https://meet.nettu.no/:roomId/:code?
+ * https://meet.life.no/:roomId/:code?
  * - roomId is the room which the user wants to access
  * - code is an optional param provided by the external application that can be used to retrieve user information
  * The entry page will just redirect the user and not display anything other than a splash screen
@@ -143,7 +143,7 @@ const useStyles = makeStyles((theme) => ({
 
 interface Props extends RouteComponentProps {}
 
-const NAME_LOCAL_STORAGE_KEY = "nettu-meet-display-name";
+const NAME_LOCAL_STORAGE_KEY = "life-meet-display-name";
 
 const Lobby = (props: Props) => {
   const classes = useStyles();
