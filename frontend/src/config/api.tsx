@@ -14,8 +14,8 @@ const prodApiConfig = {
 };
 
 const frontendUrl = !isDevelopment
-  ? "http://13.126.254.175:3000"
-  : "http://13.126.254.175:3000";
+  ? "https://meet.lifecompilers.in"
+  : "https://meet.lifecompilers.in";
 
 const apiConfig = !isDevelopment ? prodApiConfig : devApiConfig;
 
