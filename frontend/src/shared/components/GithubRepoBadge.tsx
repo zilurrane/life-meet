@@ -65,7 +65,7 @@ export const GithubRepoBadge = (props: Props) => {
   useEffect(() => {
     const getStars = async () => {
       const res = await axios.get(
-        "https://api.github.com/repos/fmeringdal/nettu-meet"
+        "https://api.github.com/repos/zilurrane/nettu-meet"
       );
       if (res.status !== 200) return;
       setStars(res.data.stargazers_count + "");
@@ -76,7 +76,7 @@ export const GithubRepoBadge = (props: Props) => {
   return (
     <a
       className={classes.container}
-      href="https://github.com/fmeringdal/nettu-meet"
+      href="https://github.com/zilurrane/nettu-meet"
       target="_blank"
       rel="noopener noreferrer"
     >

@@ -34,7 +34,7 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
-          username: fmeringdal
+          username: zilurrane
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Push
         uses: docker/build-push-action@v2
@@ -42,4 +42,4 @@ jobs:
           context: ./frontend
           file: ./frontend/docker/Dockerfile
           push: true
-          tags: fmeringdal/nettu-meet-frontend:latest
+          tags: zilurrane/nettu-meet-frontend:latest
