@@ -12,7 +12,7 @@ const awsConfig = {
     accessKeyId: process.env['AWS_ACCESS_KEY_ID']!,
     sesEmailSource: process.env['SES_EMAIL_SOURCE']!,
     mediaBucket: process.env['S3_BUCKET']!,
-    region: 'eu-west-1',
+    region: 'ap-south-1',
 };
 
 const defaultAccountName = 'nettumeet';
