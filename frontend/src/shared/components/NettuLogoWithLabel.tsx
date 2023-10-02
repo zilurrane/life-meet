@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) =>
       },
     },
     logoTitle: {
-      fontSize: "1rem",
+      fontSize: "1.5rem",
       margin: 0,
       textOverflow: "ellipsis",
       maxWidth: "200px",
