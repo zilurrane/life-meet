@@ -14,6 +14,7 @@ export enum CANVAS_MODE {
   ERASER = "ERASER",
   TEXT = "TEXT",
   LINE = "LINE",
+  TRIANGLE = "TRIANGLE",
 }
 
 export type CanvasToolbar = {
@@ -371,6 +372,18 @@ export class CanvasManager extends EventEmitter {
       addedObject = circle;
     } else if (this.toolbar.mode === CANVAS_MODE.TEXT) {
       return;
+    } else if (this.toolbar.mode === CANVAS_MODE.TRIANGLE) {
+      const rect = new fabric.Triangle({
+        width: 0,
+        height: 0,
+        left: pointer.x,
+        top: pointer.y,
+        fill: "transparent",
+        stroke: canvas.freeDrawingBrush.color,
+        strokeWidth: canvas.freeDrawingBrush.width,
+        // fill: self.canvas.freeDrawingBrush.color
+      });
+      addedObject = rect;
     } else {
       return;
     }
@@ -387,7 +400,7 @@ export class CanvasManager extends EventEmitter {
   }
 
   private addObject(obj: FabricObject, commit?: boolean) {
-    logger.info({commit:commit},"adding object but not commiting? ");
+    logger.info({ commit: commit }, "adding object but not commiting? ");
     this.getCanvas().add(obj);
     if (commit) {
       this.commitObject(obj);
@@ -467,6 +480,18 @@ export class CanvasManager extends EventEmitter {
         activeObject.set({ originY: "top" });
       }
     } else if (this.toolbar.mode === CANVAS_MODE.RECT) {
+      const currentX = activeObject.get("left")!;
+      const currentY = activeObject.get("top")!;
+      const width = pointer.x - currentX;
+      const height = pointer.y - currentY;
+
+      if (!width || !height) {
+        return;
+      }
+
+      activeObject.set("width", width).set("height", height);
+    }
+    else if (this.toolbar.mode === CANVAS_MODE.TRIANGLE) {
       const currentX = activeObject.get("left")!;
       const currentY = activeObject.get("top")!;
       const width = pointer.x - currentX;
@@ -578,6 +603,9 @@ export class CanvasManager extends EventEmitter {
         break;
       case "circle":
         o = new fabric.Circle(oProps);
+        break;
+      case "triangle":
+        o = new fabric.Triangle(oProps);
         break;
       case "rect":
         o = new fabric.Rect(oProps);

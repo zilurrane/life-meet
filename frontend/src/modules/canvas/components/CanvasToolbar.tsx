@@ -62,6 +62,11 @@ const styles = {
     height: "2px",
     backgroundColor: "#323e49",
   },
+  toolbarIconTriangle: {
+    width: "16px",
+    height: "8px",
+    border: "1.2px solid #323e49",
+  },
 };
 
 const getToolIcon = (tool: string) => {
@@ -96,6 +101,14 @@ const getToolIcon = (tool: string) => {
         <div
           style={{ ...styles.toolbarIconFigure, ...styles.toolbarIconCircle }}
         ></div>
+      );
+    case CANVAS_MODE.TRIANGLE:
+      return (
+        <img
+          src="https://img.icons8.com/ios/100/triangle-stroked.png"
+          alt=""
+          style={{ ...styles.toolbarIcon, width: "16px", height: "16px" }}
+        />
       );
     case CANVAS_MODE.TEXT:
       return <TextIcon style={styles.toolbarIcon} />;
@@ -152,7 +165,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-interface Props {}
+interface Props { }
 
 const BoxCenter: FunctionComponent<any> = (props: {
   style?: CSSProperties;
@@ -192,6 +205,7 @@ export const CanvasToolbar = (props: Props) => {
     CANVAS_MODE.LINE,
     CANVAS_MODE.RECT,
     CANVAS_MODE.CIRCLE,
+    CANVAS_MODE.TRIANGLE,
   ].includes(mode as CANVAS_MODE);
 
   return (
@@ -210,6 +224,7 @@ export const CanvasToolbar = (props: Props) => {
           { tool: CANVAS_MODE.LINE },
           { tool: CANVAS_MODE.RECT },
           { tool: CANVAS_MODE.CIRCLE },
+          { tool: CANVAS_MODE.TRIANGLE },
           // { tool: "text" },
           { tool: "clear" },
         ].map((tool) => (
@@ -234,17 +249,17 @@ export const CanvasToolbar = (props: Props) => {
         <Fragment>
           <BoxCenter style={{ margin: "0 10px" }}>
             <ColorPicker
-            defaultValue="#000"
-            onChange={c => canvasManager.setColor('#' + c.hex)}
-            value={color}
-            palette={colorOptions} />
+              defaultValue="#000"
+              onChange={c => canvasManager.setColor('#' + c.hex)}
+              value={color}
+              palette={colorOptions} />
           </BoxCenter>
           <BoxCenter style={{ margin: "0 10px" }}>
-            <div style={{color: "black", marginRight: "10px"}}>
+            <div style={{ color: "black", marginRight: "10px" }}>
               Brush Width:
             </div>
             <Slider
-              style={{width: "150px"}}
+              style={{ width: "150px" }}
               defaultValue={5}
               value={brushWidth}
               onChange={(e, newValue) => (canvasManager.setBrushWidth(newValue as number))}
