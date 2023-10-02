@@ -117,7 +117,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-interface Props extends RouteComponentProps {}
+interface Props extends RouteComponentProps { }
 
 const LandingPage = (props: Props) => {
   const classes = useStyles();
@@ -137,23 +137,14 @@ const LandingPage = (props: Props) => {
     };
   }, []);
 
-  const createDemoMeeting = () => {
-    const windowOpen = window.open();
-    const move = async () => {
-      const demo = await meetingService.createDemoMeeting();
-      if (demo) {
-        const location = `${frontendUrl}/meeting/${demo.getValue().meetingId}`;
-        if (windowOpen) {
-          // @ts-ignore
-          windowOpen.location = location;
-        } else {
-          window.open(location);
-        }
-      } else {
-        alert("Unable to create a demo meeting");
-      }
-    };
-    move();
+  const createDemoMeeting = async () => {
+    const demo = await meetingService.createDemoMeeting();
+    if (demo) {
+      const location = `${frontendUrl}/meeting/${demo.getValue().meetingId}`;
+      window.open(location);
+    } else {
+      alert("Unable to create a demo meeting");
+    }
   };
 
   return (
