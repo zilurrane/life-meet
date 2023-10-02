@@ -387,7 +387,7 @@ const CreateAccountPage = (props: Props) => {
                 }
               }}
             >
-              SEE DOCUMENTATION
+              See API Docs
             </Button>
           </Fragment>
         );

@@ -174,7 +174,7 @@ const LandingPage = (props: Props) => {
                     fontWeight: 500,
                   }}
                 >
-                  Documentation
+                  API Docs
                 </Button>
                 <div className={classes.divider}></div>
                 <Button
@@ -183,7 +183,7 @@ const LandingPage = (props: Props) => {
                   size="small"
                   onClick={() => props.history.push("/create")}
                 >
-                  GET STARTED
+                  Register
                 </Button>
               </Fragment>
             )}
