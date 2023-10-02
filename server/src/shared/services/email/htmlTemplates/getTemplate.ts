@@ -89,7 +89,7 @@ const email_verification_template = `
         <div class="container">
             <div class="main">
                 <h3 class="welcome-tite">Hi,</h3>
-                <p class="welcome-description">Your email confirmation code for Nettumeet is <b>{{code}}</b>.</p>
+                <p class="welcome-description">Your email confirmation code for LifeMeet is <b>{{code}}</b>.</p>
             </div>
         </div>
     </body>
