@@ -79,7 +79,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 500,
     fontSize: ".875rem",
     letterSpacing: ".0107142857em",
-    height: "3em",
     borderRadius: "4px",
     "&:hover": {
       boxShadow: theme.shadows[4],
@@ -214,15 +213,8 @@ const LandingPage = (props: Props) => {
             <Grid item md={5}>
               <div className={classes.left}>
                 <Typography className={classes.title}>
-                  Open source video conferencing for tutors
+                  Open source video conferencing for interactive collaboration experience
                 </Typography>
-                {/* <Typography
-                  className={classes.description}
-                  color="textSecondary"
-                >
-                  LifeMeet is an open source video conference application
-                  designed for interactive learning online.
-                </Typography> */}
                 {[
                   "Audio and video: Real-time sharing of audio and video.",
                   "Shared whiteboard: Collaborate with students on a shared whiteboard.",
